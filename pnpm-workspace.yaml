@@ -1,0 +1,12 @@
+packages:
+  - api/
+  - packages/*
+catalog:
+  eslint: 9.23.0
+  eslint-config-unjs: ^0.4.2
+  nitropack: ^2.11.7
+  prettier: ^3.5.3
+  "@antfu/ni": ^24.3.0
+  typescript: ^5.8.2
+onlyBuiltDependencies:
+  - esbuild

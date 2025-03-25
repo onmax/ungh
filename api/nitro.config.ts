@@ -24,4 +24,5 @@ export default defineNitroConfig({
       base: "./.cache/gh",
     },
   },
+  compatibilityDate: "2025-03-20",
 });

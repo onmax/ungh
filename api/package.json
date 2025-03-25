@@ -1,0 +1,14 @@
+{
+  "name": "ungh",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "nitropack prepare",
+    "build": "nitropack build",
+    "dev": "nitropack dev"
+  },
+  "devDependencies": {
+    "nitropack": "catalog:"
+  },
+  "packageManager": "pnpm@9.15.3"
+}
