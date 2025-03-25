@@ -6,17 +6,23 @@
     "prepare": "nr -r prepare",
     "build": "nr -r build",
     "dev": "nr -r dev",
+    "prepublishOnly": "pnpm build",
     "lint": "eslint --cache . && prettier -c .",
     "lint:fix": "eslint --cache --fix . && prettier -w .",
-    "test": "pnpm lint && pnpm test:types",
-    "test:types": "tsc --noEmit"
+    "test": "pnpm lint && pnpm test:types && vitest run --coverage",
+    "test:types": "tsc --noEmit",
+    "release": "pnpm test && pnpm build && changelogen --release && pnpm publish && git push --follow-tags"
   },
   "devDependencies": {
     "@antfu/ni": "catalog:",
     "eslint": "catalog:",
     "eslint-config-unjs": "catalog:",
     "prettier": "catalog:",
-    "typescript": "catalog:"
+    "@vitest/coverage-v8": "catalog:",
+    "typescript": "catalog:",
+    "changelogen": "catalog:",
+    "unbuild": "catalog:",
+    "vitest": "catalog:"
   },
   "packageManager": "pnpm@10.6.5"
 }

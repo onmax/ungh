@@ -1,0 +1,25 @@
+{
+  "name": "ungh",
+  "version": "0.1.0",
+  "description": "Unlimited access to GitHub API",
+  "repository": "unjs/ungh",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vitest",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "ofetch": "^1.4.1",
+    "unstorage": "^1.15.0"
+  },
+  "packageManager": "pnpm@10.3.0"
+}
